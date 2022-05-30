@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lembrete de Compras</string>
+    <string name="menu_home_home">Home</string>
+    <string name="menu_home_profile">Perfil</string>
+    <string name="login_subtitle">Faça o login para continuar</string>
+    <string name="label_email">E-MAIL</string>
+    <string name="label_password">SENHA</string>
+    <string name="button_login">Conectar</string>
+    <string name="logo_app_content_desc">Logo app</string>
+    <string name="button_create_account">Criar conta</string>
+    <string name="button_i_have_account">Já tenho conta</string>
+    <string name="signup_subtitle">Preencha os dados da sua conta</string>
+    <string name="loading_message_processing">Carregando</string>
+    <string name="label_username">SEU NOME</string>
+    <string name="label_phone">TELEFONE</string>
+    <string name="label_create_account">Criar minha conta</string>
+    <string name="label_reset_password">Esqueci minha senha</string>
+    <string name="version">Versão 1.0</string>
+    <string name="list_all_itens">Listar Todos os Itens</string>
+    <string name="create_new_item">Criar Novo Item</string>
+    <string name="about">Sobre</string>
+    <string name="close">Fechar</string>
+</resources>
