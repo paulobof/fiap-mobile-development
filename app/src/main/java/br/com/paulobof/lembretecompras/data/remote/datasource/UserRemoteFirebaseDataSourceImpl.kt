@@ -1,15 +1,20 @@
 package br.com.paulobof.lembretecompras.data.remote.datasource
 
+import br.com.paulobof.lembretecompras.data.remote.mapper.NewUserFirebasePayloadMapper
+import br.com.paulobof.lembretecompras.domain.entity.NewUser
 import br.com.paulobof.lembretecompras.domain.entity.RequestState
 import br.com.paulobof.lembretecompras.domain.entity.User
 import br.com.paulobof.lembretecompras.domain.entity.UserLogin
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.tasks.await
 
 @ExperimentalCoroutinesApi
 class UserRemoteFirebaseDataSourceImpl(
-    private val firebaseAuth: FirebaseAuth
+    private val firebaseAuth: FirebaseAuth,
+    private val firebaseFirestore: FirebaseFirestore
+
 ) : UserRemoteDataSource {
 
     override suspend fun getUserLogged(): RequestState<User> {
@@ -42,6 +47,7 @@ class UserRemoteFirebaseDataSourceImpl(
             RequestState.Error(excpetion)
         }
     }
+
     override suspend fun resetPassword(email: String):
             RequestState<String> {
         return try{
@@ -51,5 +57,29 @@ class UserRemoteFirebaseDataSourceImpl(
             RequestState.Error(e)
         }
     }
+
+    override suspend fun create(newUser: NewUser): RequestState<User> {
+        return try {
+            firebaseAuth.createUserWithEmailAndPassword(newUser.email, newUser.password).await()
+            val newUserFirebasePayload =
+                NewUserFirebasePayloadMapper.mapToNewUserFirebasePayload(newUser)
+            val userId = firebaseAuth.currentUser?.uid
+            if (userId == null) {
+                RequestState.Error(java.lang.Exception("Não foi possível criar a conta"))
+            } else {
+                firebaseFirestore
+                    .collection("users")
+                    .document(userId)
+                    .set(newUserFirebasePayload)
+                    .await()
+                RequestState.Success(NewUserFirebasePayloadMapper.mapToUser(newUserFirebasePayload))
+            }
+        } catch (e: java.lang.Exception) {
+            RequestState.Error(e)
+        }
+    }
+
+
+
 
 }

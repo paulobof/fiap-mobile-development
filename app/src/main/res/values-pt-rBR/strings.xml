@@ -21,4 +21,8 @@
     <string name="create_new_item">Criar Novo Item</string>
     <string name="about">Sobre</string>
     <string name="close">Fechar</string>
+    <string name="return_home">Retornar</string>
+    <string name="DevBy">Desenvolvindo por:</string>
+    <string name="nameDev2">343539 - Wesley Guimarães</string>
+    <string name="nameDev1">342789 - Paulo Bof</string>
 </resources>

@@ -13,11 +13,13 @@
         <entry key="..\:/Programacao/Mobile Development/fiap-mobile-development/app/src/main/res/drawable/shape_button.xml" value="0.1" />
         <entry key="..\:/Programacao/Mobile Development/fiap-mobile-development/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Programacao/Mobile Development/fiap-mobile-development/app/src/main/res/layout/dash_item.xml" value="0.1911231884057971" />
+        <entry key="..\:/Programacao/Mobile Development/fiap-mobile-development/app/src/main/res/layout/fragment_about.xml" value="0.22" />
         <entry key="..\:/Programacao/Mobile Development/fiap-mobile-development/app/src/main/res/layout/fragment_better_fuel.xml" value="0.1911231884057971" />
         <entry key="..\:/Programacao/Mobile Development/fiap-mobile-development/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Programacao/Mobile Development/fiap-mobile-development/app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="..\:/Programacao/Mobile Development/fiap-mobile-development/app/src/main/res/layout/fragment_profile.xml" value="0.16576086956521738" />
         <entry key="..\:/Programacao/Mobile Development/fiap-mobile-development/app/src/main/res/layout/fragment_sign_up.xml" value="0.22" />
+        <entry key="..\:/Programacao/Mobile Development/fiap-mobile-development/app/src/main/res/layout/fragment_signup.xml" value="0.1" />
         <entry key="..\:/Programacao/Mobile Development/fiap-mobile-development/app/src/main/res/layout/fragment_splash.xml" value="0.1911231884057971" />
         <entry key="..\:/Programacao/Mobile Development/fiap-mobile-development/app/src/main/res/layout/include_loading.xml" value="0.1911231884057971" />
       </map>

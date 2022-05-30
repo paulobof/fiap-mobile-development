@@ -27,5 +27,9 @@
     <string name="create_new_item">Create New Item</string>
     <string name="about">About</string>
     <string name="close">Close</string>
+    <string name="return_home">Return</string>
+    <string name="DevBy">Developed by:</string>
+    <string name="nameDev2">343539 - Wesley Guimarães</string>
+    <string name="nameDev1">342789 - Paulo Bof</string>
 
 </resources>

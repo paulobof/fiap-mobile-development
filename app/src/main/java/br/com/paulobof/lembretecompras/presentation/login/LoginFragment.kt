@@ -19,11 +19,13 @@ import br.com.paulobof.lembretecompras.domain.usecases.ResetPasswordUseCase
 import br.com.paulobof.lembretecompras.presentation.base.BaseFragment
 import br.com.paulobof.lembretecompras.presentation.base.auth.NAVIGATION_KEY
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @ExperimentalCoroutinesApi
 class LoginFragment : BaseFragment() {
     override val layout = R.layout.fragment_login
+
     private lateinit var tvSubTitleSignUp: TextView
     private lateinit var containerLogin: LinearLayout
     private lateinit var tvResetPassword: TextView
@@ -38,12 +40,18 @@ class LoginFragment : BaseFragment() {
             LoginViewModelFactory(
                 LoginUseCase(
                     UserRepositoryImpl(
-                        UserRemoteFirebaseDataSourceImpl(FirebaseAuth.getInstance())
+                        UserRemoteFirebaseDataSourceImpl(
+                            FirebaseAuth.getInstance(),
+                            FirebaseFirestore.getInstance()
+                        )
                     )
                 ),
                 ResetPasswordUseCase(
                     UserRepositoryImpl(
-                        UserRemoteFirebaseDataSourceImpl(FirebaseAuth.getInstance())
+                        UserRemoteFirebaseDataSourceImpl(
+                            FirebaseAuth.getInstance(),
+                            FirebaseFirestore.getInstance()
+                        )
                     )
                 )
             )

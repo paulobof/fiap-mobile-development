@@ -15,6 +15,7 @@ import br.com.paulobof.lembretecompras.domain.entity.RequestState
 import br.com.paulobof.lembretecompras.domain.usecases.GetUserLoggedUseCase
 import br.com.paulobof.lembretecompras.presentation.base.BaseFragment
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 const val NAVIGATION_KEY = "NAV_KEY"
@@ -26,7 +27,8 @@ abstract class BaseAuthFragment : BaseFragment() {
 
             BaseViewModelFactory(GetUserLoggedUseCase(UserRepositoryImpl(
                 UserRemoteFirebaseDataSourceImpl(
-                    FirebaseAuth.getInstance()
+                    FirebaseAuth.getInstance(),
+                    FirebaseFirestore.getInstance()
                 )
             )))
         ).get(BaseAuthViewModel::class.java)

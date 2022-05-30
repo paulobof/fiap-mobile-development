@@ -1,6 +1,7 @@
 package br.com.paulobof.lembretecompras.data.remote.repository
 
 import br.com.paulobof.lembretecompras.data.remote.datasource.UserRemoteDataSource
+import br.com.paulobof.lembretecompras.domain.entity.NewUser
 import br.com.paulobof.lembretecompras.domain.entity.RequestState
 import br.com.paulobof.lembretecompras.domain.entity.User
 import br.com.paulobof.lembretecompras.domain.entity.UserLogin
@@ -24,5 +25,8 @@ data class UserRepositoryImpl(
         return userRemoteDataSource.resetPassword(email)
     }
 
+    override suspend fun create(newUser: NewUser): RequestState<User> {
+        return userRemoteDataSource.create(newUser)
+    }
 
 }
