@@ -25,4 +25,7 @@
     <string name="DevBy">Desenvolvindo por:</string>
     <string name="nameDev2">343539 - Wesley Guimarães</string>
     <string name="nameDev1">342789 - Paulo Bof</string>
+    <string name="newItemItem">Item</string>
+
+    <string name="createNewItem">Criar Novo Item</string>
 </resources>

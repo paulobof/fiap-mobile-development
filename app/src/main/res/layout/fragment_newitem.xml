@@ -6,46 +6,43 @@
     android:layout_height="match_parent">
 
 
-    <TextView
-        android:id="@+id/tvDevBy"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:id="@+id/containerLogin"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/DevBy"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNewItem" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
-    <TextView
-        android:id="@+id/tvDevBy2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/nameDev1"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDevBy" />
 
-    <TextView
-        android:id="@+id/tvDevBy3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/nameDev2"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDevBy2" />
+        <LinearLayout
+            style="@style/container_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/label_edit_text"
+                android:text="@string/newItemItem" />
+
+            <EditText
+                android:id="@+id/etNewItem"
+                style="@style/field_edit_text"
+                android:layout_height="wrap_content"
+                tools:ignore="TouchTargetSizeCheck"
+                tools:text="NOVO ITEM" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btNewItemCreate"
+            style="@style/button"
+            android:text="@string/createNewItem" />
+
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -80,7 +77,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tvHomeTitle"
             app:layout_constraintStart_toStartOf="@+id/tvHomeTitle"
-            android:text="@string/version" />
+            tools:text="@string/version" />
 
         <ImageView
             android:id="@+id/ivHomeLogo"
@@ -101,25 +98,24 @@
         android:id="@+id/tvNewItem"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textAlignment="center"
+        android:layout_marginTop="32dp"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHomeTitle2"
-        tools:text="@string/version" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/containerLogin"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:text="Digite o item a ser comprado:" />
 
     <ImageView
         android:id="@+id/ivHomeLogo2"
-        android:layout_width="132dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="113dp"
+        android:layout_height="115dp"
         android:contentDescription="@string/logo_app_content_desc"
+        app:layout_constraintBottom_toTopOf="@+id/ivNewItemBack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/containerLogin"
         app:srcCompat="@drawable/ic_logo" />
 
     <ImageView
@@ -143,20 +139,4 @@
         app:layout_constraintBottom_toBottomOf="@+id/ivNewItemBack"
         app:layout_constraintStart_toEndOf="@+id/ivNewItemBack"
         app:layout_constraintTop_toTopOf="@+id/ivNewItemBack" />
-
-    <TextView
-        android:id="@+id/tvHomeTitle2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/helvetica_neue"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivHomeLogo2" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

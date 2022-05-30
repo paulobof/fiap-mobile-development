@@ -17,10 +17,16 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_newItemFragment"
+            app:destination="@id/newItemFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_listItemFragment"
+            app:destination="@id/listItemFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="br.com.paulobof.lembretecompras.presentation.base.about.AboutFragment"
+        android:name="br.com.paulobof.lembretecompras.presentation.about.AboutFragment"
         android:label="AboutFragment"
         tools:layout="@layout/fragment_about">
         <action
@@ -31,5 +37,30 @@
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
+    <fragment
+        android:id="@+id/newItemFragment"
+        android:name="br.com.paulobof.lembretecompras.presentation.newitem.NewItemFragment"
+        android:label="NewItemFragment"
+        tools:layout="@layout/fragment_newitem">
+        <action
+            android:id="@+id/action_newItemFragment_to_listItemFragment"
+            app:destination="@id/listItemFragment" />
+        <action
+            android:id="@+id/action_newItemFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listItemFragment"
+        android:name="br.com.paulobof.lembretecompras.presentation.listitem.ListItemFragment"
+        android:label="ListItemFragment"
+        tools:layout="@layout/fragment_listitem">
+        <action
+            android:id="@+id/action_listItemFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_listItemFragment_to_newItemFragment"
+            app:destination="@id/newItemFragment" />
+    </fragment>
+
     <include app:graph="@navigation/login_graph" />
 </navigation>

@@ -62,9 +62,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/list_all_itens"
-        app:layout_constraintEnd_toEndOf="@+id/tvAboutVersion"
-        app:layout_constraintStart_toStartOf="@+id/tvAboutVersion"
-        app:layout_constraintTop_toBottomOf="@+id/tvAboutVersion" />
+        app:layout_constraintEnd_toEndOf="@+id/tvNewItem"
+        app:layout_constraintStart_toStartOf="@+id/tvNewItem"
+        app:layout_constraintTop_toBottomOf="@+id/tvNewItem" />
 
     <Button
         android:id="@+id/btNewItem"
@@ -79,7 +79,7 @@
 
 
     <TextView
-        android:id="@+id/tvAboutVersion"
+        android:id="@+id/tvNewItem"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -114,7 +114,7 @@
         app:srcCompat="@drawable/ic_about" />
 
     <ImageView
-        android:id="@+id/ivAboutBack"
+        android:id="@+id/ivNewItemBack"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginEnd="16dp"
@@ -135,15 +135,15 @@
         app:layout_constraintTop_toTopOf="@+id/ivAbout" />
 
     <TextView
-        android:id="@+id/tvAboutBack"
+        android:id="@+id/tvNewItemBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:text="@string/close"
         android:textAlignment="textEnd"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/ivAboutBack"
-        app:layout_constraintEnd_toStartOf="@+id/ivAboutBack"
-        app:layout_constraintTop_toTopOf="@+id/ivAboutBack" />
+        app:layout_constraintBottom_toBottomOf="@+id/ivNewItemBack"
+        app:layout_constraintEnd_toStartOf="@+id/ivNewItemBack"
+        app:layout_constraintTop_toTopOf="@+id/ivNewItemBack" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

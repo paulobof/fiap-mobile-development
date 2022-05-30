@@ -51,7 +51,7 @@
                 android:text="@string/label_email" />
 
             <EditText
-                android:id="@+id/etEmailLogin"
+                android:id="@+id/etNewItem"
                 style="@style/field_edit_text"
                 tools:text="heiderlopes@apps.com.br" />
 
@@ -71,7 +71,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btLogin"
+            android:id="@+id/btNewItemCreate"
             android:text="@string/button_login"
             style="@style/button"/>
 

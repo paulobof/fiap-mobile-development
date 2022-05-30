@@ -33,20 +33,20 @@ class HomeFragment : BaseAuthFragment() {
     }
 
     private fun setUpView(view: View) {
-        tvHomeHelloUser = view.findViewById(R.id.tvAboutVersion)
+        tvHomeHelloUser = view.findViewById(R.id.tvNewItem)
         tvAbout = view.findViewById(R.id.tvAbout)
-        tvClose = view.findViewById(R.id.tvAboutBack)
+        tvClose = view.findViewById(R.id.tvNewItemBack)
         btListAll = view.findViewById(R.id.btListAll)
         btNewItem = view.findViewById(R.id.btNewItem)
         ivAbout = view.findViewById(R.id.ivAbout)
-        ivClose = view.findViewById(R.id.ivAboutBack)
+        ivClose = view.findViewById(R.id.ivNewItemBack)
 
         btListAll.setOnClickListener {
-            showMessage("LISTAR TODOS")
+            findNavController().navigate(R.id.action_homeFragment_to_listItemFragment)
         }
 
         btNewItem.setOnClickListener {
-            showMessage("NOVO ITEM")
+            findNavController().navigate(R.id.action_homeFragment_to_newItemFragment)
         }
 
         ivAbout.setOnClickListener {

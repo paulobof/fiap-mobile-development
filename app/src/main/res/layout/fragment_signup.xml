@@ -97,11 +97,13 @@
 
                 <TextView
                     style="@style/label_edit_text"
+                    android:inputType="phone"
                     android:text="@string/label_phone" />
 
                 <EditText
                     android:id="@+id/etPhoneSignUp"
                     style="@style/field_edit_text"
+                    android:inputType="phone"
                     tools:text="(11) 999999-999" />
             </LinearLayout>
 

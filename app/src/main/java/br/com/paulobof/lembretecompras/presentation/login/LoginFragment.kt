@@ -71,8 +71,8 @@ class LoginFragment : BaseFragment() {
         containerLogin = view.findViewById(R.id.containerLogin)
         tvResetPassword = view.findViewById(R.id.tvResetPassword)
         tvNewAccount = view.findViewById(R.id.tvNewAccount)
-        btLogin = view.findViewById(R.id.btLogin)
-        etEmailLogin = view.findViewById(R.id.etEmailLogin)
+        btLogin = view.findViewById(R.id.btNewItemCreate)
+        etEmailLogin = view.findViewById(R.id.etNewItem)
         etPasswordLogin = view.findViewById(R.id.etPasswordLogin)
         btLogin.setOnClickListener {
             loginViewModel.doLogin(
